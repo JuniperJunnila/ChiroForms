@@ -1,0 +1,30 @@
+@use "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.footer-button {
+  @extend .col-1 !optional;
+  @extend .btn !optional;
+}
+
+.footer {
+  @extend .text-bg-secondary !optional;
+  @extend .text-center !optional;
+}
+
+.container {
+  @extend .container-fluid !optional;
+}
+
+.section {
+  @extend .mb-4 !optional;
+  @extend .row !optional;
+  @extend .justify-content-center !optional;
+}
+
+.info {
+  @extend .col-8 !optional;
+  @extend .fw-bold !optional;
+}
+
+.link-light {
+  @extend .link-light !optional;
+}

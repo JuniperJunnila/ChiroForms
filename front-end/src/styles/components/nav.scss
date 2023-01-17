@@ -1,0 +1,96 @@
+@use "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.button {
+  @extend .btn !optional;
+  @extend .btn-primary !optional;
+  @extend .btn-block !optional;
+}
+
+.group {
+  @extend .btn-group !optional;
+}
+
+.nav {
+  @extend .navbar !optional;
+  @extend .text-bg-light !optional;
+  @extend .container-fluid !optional;
+  @extend .mt-0 !optional;
+  @extend .pt-0 !optional;
+}
+
+.brand {
+  @extend .navbar-brand !optional;
+}
+
+.logo {
+  @extend .w-100 !optional;
+}
+
+.toggle {
+  @extend .navbar-toggler !optional;
+  @extend .m-3 !optional;
+}
+
+.toggle-icon {
+  @extend .navbar-toggler-icon !optional;
+}
+
+.navbar-supported-content {
+  @extend .collapse !optional;
+  @extend .navbar-collapse !optional;
+  @extend .navbar-expand-md !optional;
+}
+
+.list {
+  @extend .navbar-nav !optional;
+  @extend .me-auto !optional;
+  @extend .mb-2 !optional;
+  @extend .mb-lg-0 !optional;
+}
+
+.list-container {
+  @extend .container-fluid !optional;
+  @extend .d-flex !optional;
+  @extend .flex-column !optional;
+  @extend .flex-md-row !optional;
+  @extend .justify-content-start !optional;
+}
+
+.listItem {
+  @extend .nav-item !optional;
+  @extend .mx-2 !optional;
+}
+
+.link-active {
+  @extend .nav-link !optional;
+  @extend .active !optional;
+}
+
+.dropdown {
+  @extend .nav-item !optional;
+  @extend .mx-2 !optional;
+  @extend .dropdown !optional;
+}
+
+.dropdown-toggle {
+  @extend .nav-link !optional;
+  @extend .dropdown-toggle !optional;
+}
+
+.dropdown-menu {
+  @extend .dropdown-menu !optional;
+}
+
+.dropdown-item {
+  @extend .dropdown-item !optional;
+}
+
+.buttons {
+  @extend .ml-auto !optional;
+  @extend .mx-2 !optional;
+}
+
+.nav-button {
+  @extend .btn !optional;
+  @extend .btn-primary !optional;
+}

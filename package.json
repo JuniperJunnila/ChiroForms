@@ -1,0 +1,29 @@
+{
+  "name": "chiroform",
+  "version": "0.0.1",
+  "description": "Lifestyle Health and Fitness Chiroprctic Companion",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon back-end/src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "JuniperJJ",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "knex": "^2.3.0",
+    "pg": "^8.8.0",
+    "react-router-dom": "^6.4.2"
+  }
+}

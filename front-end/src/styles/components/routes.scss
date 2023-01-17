@@ -1,0 +1,17 @@
+@use "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.all-routes {
+  @extend .bg-secondary !optional;
+}
+.browser-router {
+  @extend .d-flex !optional;
+  @extend .flex-column !optional;
+}
+
+.route-divs {
+  @extend .m-0 !optional;
+}
+
+.footer-route {
+  @extend .m-3 !optional;
+}
