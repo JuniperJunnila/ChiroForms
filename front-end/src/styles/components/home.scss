@@ -1,26 +1,5 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.cards {
-  @extend .text-bg-white !optional;
-  @extend .rounded !optional;
-  @extend .row !optional;
-  @extend .mb-3 !optional;
-  @extend .border !optional;
-  @extend .border-dark !optional;
-}
-
-.please-email {
-  @extend .text-center !optional;
-  @extend .rounded !optional;
-}
-
-.edit-button {
-  @extend .btn !optional;
-  @extend .btn-primary !optional;
-  @extend .border !optional;
-  @extend .border-dark !optional;
-}
-
 .wrapper {
   @extend .container !optional;
   @extend .d-flex !optional;
@@ -57,17 +36,18 @@
   @extend .text-md-start !optional;
 }
 
-.home-p {
-  @extend .m-3 !optional;
-  @extend .col !optional;
-  @extend .col-lg-8 !optional;
-  @extend .col-md-11 !optional;
-  @extend .text-dark !optional;
-}
-
-.cards-wrap {
-  @extend .m-4 !optional;
-  @extend .rounded !optional;
-  @extend .col !optional;
-  @extend .text-center !optional;
-}
+.group {
+  height: auto;
+ }
+ 
+ .form {
+  height: auto;
+ }
+ 
+ .item {
+     @extend .form-item !optional;
+ }
+ 
+ .control {
+     @extend .form-control !optional;
+ }

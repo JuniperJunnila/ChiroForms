@@ -6,8 +6,9 @@
 }
 
 .footer {
-  @extend .text-bg-secondary !optional;
+  background-color: #99a5b5;
   @extend .text-center !optional;
+  @extend .text-light !optional;
 }
 
 .container {

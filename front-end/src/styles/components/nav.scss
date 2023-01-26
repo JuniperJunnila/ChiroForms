@@ -20,10 +20,18 @@
 
 .brand {
   @extend .navbar-brand !optional;
+  height: 25vh;
+}
+
+.banner {
+  width: 100vw;
+  height: 33vh;
+  object-fit: cover;
+  object-position: 0% 0%
 }
 
 .logo {
-  @extend .w-100 !optional;
+  @extend .mt-2
 }
 
 .toggle {

@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar/Navbar.js";
 import Home from "../../components/Home/Home.js";
 import Footer from "../../components/Footer/Footer.js";
 import PageNotImplemented from "../PageNotImplemented/PageNotImplemented.js";
-import FlexTests from "../../components/FlexTests/FlexTests.js";
 
 export default function AllRoutes({ appState }) {
   return (
@@ -16,7 +15,6 @@ export default function AllRoutes({ appState }) {
           <div className="route-divs" id="route-divs">
             <Routes>
               <Route path="" element={<Home appState={appState} />} />
-              <Route path="/flex-tests" element={<FlexTests />} />
               <Route
                 path="/our-philosophy"
                 element={<PageNotImplemented pageName={"Our Philosophy"} />}
