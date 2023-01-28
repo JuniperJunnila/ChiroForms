@@ -1,17 +1,18 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.all-routes {
+.r1-bg {
   background-color: #99a5b5;
 }
-.browser-router {
+
+.r1-bx {
   @extend .d-flex !optional;
   @extend .flex-column !optional;
 }
 
-.route-divs {
+.r1-bx2 {
   @extend .m-0 !optional;
 }
 
-.footer-route {
+.r1-bx3 {
   @extend .m-3 !optional;
 }

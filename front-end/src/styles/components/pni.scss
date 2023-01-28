@@ -1,9 +1,9 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.wrapper-pni {
+.pni-wr {
   @extend .container-fluid !optional;
 }
-.header1 {
+.pni-h {
   @extend .m-3 !optional;
   @extend .p-3 !optional;
   @extend .text-center !optional;

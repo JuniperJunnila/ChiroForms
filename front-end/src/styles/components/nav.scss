@@ -1,16 +1,16 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.button {
-  @extend .btn !optional;
-  @extend .btn-primary !optional;
-  @extend .btn-block !optional;
-}
+// .n1-b1 {
+//   @extend .btn !optional;
+//   @extend .btn-primary !optional;
+//   @extend .btn-block !optional;
+// }
 
-.group {
+.n1-btg {
   @extend .btn-group !optional;
 }
 
-.nav {
+.n1-nav {
   @extend .navbar !optional;
   @extend .text-bg-light !optional;
   @extend .container-fluid !optional;
@@ -18,87 +18,87 @@
   @extend .pt-0 !optional;
 }
 
-.brand {
+.n1-bd {
   @extend .navbar-brand !optional;
   height: 25vh;
 }
 
-.banner {
+.n1-bn {
   width: 100vw;
   height: 33vh;
   object-fit: cover;
-  object-position: 0% 0%
+  object-position: 0% 0%;
 }
 
-.logo {
-  @extend .mt-2
+.n1-bd2 {
+  @extend .mt-2;
 }
 
-.toggle {
+.n1-to {
   @extend .navbar-toggler !optional;
   @extend .m-3 !optional;
 }
 
-.toggle-icon {
+.n1-to2 {
   @extend .navbar-toggler-icon !optional;
 }
 
-.navbar-supported-content {
+.n1-nav2 {
   @extend .collapse !optional;
   @extend .navbar-collapse !optional;
   @extend .navbar-expand-md !optional;
 }
 
-.list {
+.n1-l {
   @extend .navbar-nav !optional;
   @extend .me-auto !optional;
   @extend .mb-2 !optional;
   @extend .mb-lg-0 !optional;
 }
 
-.list-container {
-  @extend .container-fluid !optional;
-  @extend .d-flex !optional;
-  @extend .flex-column !optional;
-  @extend .flex-md-row !optional;
-  @extend .justify-content-start !optional;
-}
+// .n1-bx {
+//   @extend .container-fluid !optional;
+//   @extend .d-flex !optional;
+//   @extend .flex-column !optional;
+//   @extend .flex-md-row !optional;
+//   @extend .justify-content-start !optional;
+// }
 
-.listItem {
+.n1-li {
   @extend .nav-item !optional;
   @extend .mx-2 !optional;
 }
 
-.link-active {
+.n1-a {
   @extend .nav-link !optional;
   @extend .active !optional;
 }
 
-.dropdown {
-  @extend .nav-item !optional;
-  @extend .mx-2 !optional;
-  @extend .dropdown !optional;
-}
+// .n1-to2 {
+//   @extend .nav-item !optional;
+//   @extend .mx-2 !optional;
+//   @extend .dropdown !optional;
+// }
 
-.dropdown-toggle {
-  @extend .nav-link !optional;
-  @extend .dropdown-toggle !optional;
-}
+// .n1-to3 {
+//   @extend .nav-link !optional;
+//   @extend .dropdown-toggle !optional;
+// }
 
-.dropdown-menu {
-  @extend .dropdown-menu !optional;
-}
+// .n1-to4 {
+//   @extend .dropdown-menu !optional;
+// }
 
-.dropdown-item {
-  @extend .dropdown-item !optional;
-}
+// .n1-to5 {
+//   @extend .dropdown-item !optional;
+// }
 
-.buttons {
-  @extend .ml-auto !optional;
-  @extend .mx-2 !optional;
-}
+// .n1-b {
+//   @extend .ml-auto !optional;
+//   @extend .mx-2 !optional;
+// }
 
-.nav-button {
-  @extend .btn !optional;
-  @extend .btn-primary !optional;
-}
+// .n1-b2 {
+//   @extend .btn !optional;
+//   @extend .btn-primary !optional;
+// }

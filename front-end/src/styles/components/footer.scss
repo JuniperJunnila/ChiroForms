@@ -1,31 +1,31 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.footer-button {
+.f1-b {
   @extend .col-1 !optional;
   @extend .btn !optional;
 }
 
-.footer {
+.f1-wrap {
   background-color: #99a5b5;
   @extend .text-center !optional;
   @extend .text-light !optional;
 }
 
-.container {
+.f1-bx {
   @extend .container-fluid !optional;
 }
 
-.section {
+.f1-bx2 {
   @extend .mb-4 !optional;
   @extend .row !optional;
   @extend .justify-content-center !optional;
 }
 
-.info {
+.f1-bx3 {
   @extend .col-8 !optional;
   @extend .fw-bold !optional;
 }
 
-.link-light {
+.f1-txt {
   @extend .link-light !optional;
 }

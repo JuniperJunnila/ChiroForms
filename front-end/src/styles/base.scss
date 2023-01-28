@@ -9,11 +9,11 @@ body {
   overflow-x: hidden;
 }
 
-.round {
+.base-bx {
   @extend .rounded !optional;
 }
 
-.page-wrapper {
+.base-wr {
   @extend .container !optional;
   @extend .d-flex !optional;
   @extend .flex-column !optional;

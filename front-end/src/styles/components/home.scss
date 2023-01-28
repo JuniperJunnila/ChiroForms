@@ -1,12 +1,19 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.wrapper {
+.h1-wrap {
   @extend .container !optional;
   @extend .d-flex !optional;
   @extend .flex-column !optional;
 }
 
-.body-wrapper {
+.h1-body {
+  @extend .text-bg-light !optional;
+  @extend .m-3 !optional;
+  @extend .flex-row !optional;
+  @extend .rounded !optional;
+}
+
+.hb1-wrap {
   @extend .m-md-3 !optional;
   @extend .p-md-1 !optional;
   @extend .d-flex !optional;
@@ -14,14 +21,7 @@
   @extend .text-dark !optional;
 }
 
-.body {
-  @extend .text-bg-light !optional;
-  @extend .m-3 !optional;
-  @extend .flex-row !optional;
-  @extend .rounded !optional;
-}
-
-.h1-wrap {
+.hb1-h1-wrap {
   @extend .m-md-0 !optional;
   @extend .m-lg-2 !optional;
   @extend .text-center !optional;
@@ -30,24 +30,56 @@
   @extend .bg-secondary !optional;
 }
 
-.h1 {
+.hb1-h1 {
   @extend .p-md-3 !optional;
   @extend .font-weight-bold !optional;
   @extend .text-md-start !optional;
 }
 
-.group {
+.rf1-ff {
   height: auto;
- }
- 
- .form {
+}
+
+.rf1-form {
   height: auto;
- }
- 
- .item {
-     @extend .form-item !optional;
- }
- 
- .control {
-     @extend .form-control !optional;
- }
+}
+
+.rf1-fi {
+  @extend .form-item !optional;
+}
+
+.rf1-fi-ctrl {
+  @extend .form-control !optional;
+}
+
+.rf1-fi-sct {
+  @extend .form-select !optional;
+}
+
+.rf1-bx-ck {
+  @extend .form-check !optional;
+}
+
+.rf1-fi-ck {
+  @extend .form-check-input !optional;
+}
+
+.rf1-bx-rd {
+  @extend .form-check !optional;
+}
+
+.rf1-fi-rd {
+  @extend .form-check-input !optional;
+}
+
+.rf1-fi-rn {
+  @extend .form-range !optional;
+}
+
+.rf1-txt {
+  @extend .text-secondary !optional;
+}
+
+.rf1-lab-ck {
+  @extend .form-check-label !optional;
+}

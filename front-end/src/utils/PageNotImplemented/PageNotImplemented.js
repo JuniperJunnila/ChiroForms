@@ -1,9 +1,10 @@
 import React from "react";
 
+//pni
 export default function PageNotImplemented({ pageName }) {
   return (
-    <div className="wrapper-pni" id="wrapper-pni">
-      <h1 className="header1" id="header1">
+    <div className="pni-wr" id="pni-wr">
+      <h1 className="pni-h" id="pni-h">
         Sorry, the {pageName} page has not yet been implemented.
       </h1>
     </div>

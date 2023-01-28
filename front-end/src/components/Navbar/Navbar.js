@@ -1,80 +1,81 @@
 import React from "react";
 
+//n1
 export default function Navbar() {
   return (
-    <nav className="nav" id="nav">
+    <nav className="n1-nav" id="n1-nav">
       <div>
-        <a className="brand" id="brand" href="/">
+        <a className="n1-bd" id="n1-bd" href="/">
           <img
-            className="banner"
-            id="banner"
+            className="n1-bn"
+            id="n1-bn"
             src="https://doc.vortala.com/childsites/uploads/1252/files/bg.jpg"
             alt="Lifestyle Health and Fitness Banner"
           />
         </a>
 
         <button
-          className="toggle"
-          id="toggle"
+          className="n1-to"
+          id="n1-to"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-label="Toggle navigation"
         >
-          <span className="toggle-icon" id="toggle-icon"></span>
+          <span className="n1-to2" id="n1-to2"></span>
         </button>
         <img
-          className="logo"
-          id="logo"
+          className="n1-bd2"
+          id="n1-bd2"
           src="https://doc.vortala.com/childsites/uploads/1252/files/logo2.png"
           alt="Lifestyle Health and Fitness Logo"
         />
       </div>
-      <div className="navbar-supported-content" id="navbarSupportedContent">
-        <ul className="list">
-          <li className="list-item">
-            <a className="link-active" href="#aNav">
+      <div className="n1-nav2" id="navbarSupportedContent">
+        <ul className="n1-l">
+          <li className="n1-li">
+            <a className="n1-a" href="#aNav">
               A
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#bNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#bNav">
               B
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#cNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#cNav">
               C
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#dNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#dNav">
               D
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#eNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#eNav">
               E
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#fNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#fNav">
               F
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#gNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#gNav">
               G
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#hNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#hNav">
               H
             </a>
           </li>
-          <li className="list-item">
-            <a className="link-active" href="#iNav">
+          <li className="n1-li">
+            <a className="n1-a" href="#iNav">
               I
             </a>
           </li>

@@ -4,15 +4,16 @@ import Home from "../../components/Home/Home.js";
 import Footer from "../../components/Footer/Footer.js";
 import PageNotImplemented from "../PageNotImplemented/PageNotImplemented.js";
 
+//r1
 export default function AllRoutes({ appState }) {
   return (
-    <div className="all-routes" id="all-routes">
+    <div className="r1-bg" id="r1-bg">
       <BrowserRouter>
-        <div className="browser-router" id="browser-router">
-          <div className="route-divs" id="route-divs">
+        <div className="r1-bx" id="r1-bx">
+          <div className="r1-bx2" id="r1-bx2">
             <Navbar appState={appState} />
           </div>
-          <div className="route-divs" id="route-divs">
+          <div className="r1-bx2" id="r1-bx2">
             <Routes>
               <Route path="" element={<Home appState={appState} />} />
               <Route
@@ -21,7 +22,7 @@ export default function AllRoutes({ appState }) {
               />
             </Routes>
           </div>
-          <div className="footer-route" id="footer">
+          <div className="r1-bx3" id="footer">
             <Footer appState={appState} />
           </div>
         </div>

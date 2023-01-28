@@ -109,10 +109,10 @@ export default function App() {
               >
                 card 1
               </button>
-              <h4 className="round" id="round">
+              <h4 className="base-bx" id="base-bx">
                 card 1!
               </h4>
-              <p className="round" id="round">
+              <p className="base-bx" id="base-bx">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 felis mauris, pulvinar eu mi nec, vulputate lobortis nunc.
                 Aliquam lobortis, quam eget viverra pharetra, risus tellus
@@ -133,7 +133,7 @@ export default function App() {
               >
                 card 2
               </button>
-              <h4 className="round" id="round">
+              <h4 className="base-bx" id="base-bx">
                 card 2.
               </h4>
               <p className="please-email" id="please-email">
