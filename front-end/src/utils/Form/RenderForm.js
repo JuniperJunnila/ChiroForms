@@ -1,28 +1,44 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 
-//rf1
-export default function RenderForm({ formState }) {
+//SCSS Tag Group: rf1
+export default function RenderForm({ formState, _handleFormChange }) {
+  //unpacks empty variables
   let { renderedForm, formKey, questionKey } = l_rF_l();
+
+  //iterates through the groups in the form
   for (let group in formState) {
     formKey++;
     const currentGroup = formState[group];
+    const currentgroupname = currentGroup.parentname;
     const { groupQuestions } = l_rF_l();
     const { groupHeader } = currentGroup;
+
+    //iterates through questions in group
     for (let q in currentGroup) {
       questionKey++;
       const question = currentGroup[q];
+      //ensures only questions are added, not properties of the group
       if (typeof question !== "string") {
-        _assembleQuestionIoaiOnull(question, groupQuestions, questionKey);
+        _assembleQuestion(
+          question,
+          groupQuestions,
+          questionKey,
+          currentgroupname,
+          formState,
+          _handleFormChange
+        );
       }
     }
+    //pushes the group of form inputs to what will be the final render
     renderedForm.push(
       <Row className="rf1-ff" id={groupHeader} key={formKey}>
-        {__parseHeaderIsOs(groupHeader)}
+        {__parseHeader(groupHeader)}
         <form className="rf1-f">{groupQuestions}</form>
       </Row>
     );
   }
+
   return renderedForm;
 }
 
@@ -35,10 +51,21 @@ const l_rF_l = () => {
   };
   return pkg;
 };
+//Input: object, array, integer, string, object, and function
+//Output: null
+//Pushes an series of React elements into the inputted array to be rendered
+const _assembleQuestion = (
+  question,
+  arr,
+  questionKey,
+  currentgroupname,
+  formState,
+  _handleFormChange
+) => {
+  const { description, input, parentname } = question;
+  const currentLocation = formState[currentgroupname][parentname];
 
-const _assembleQuestionIoaiOnull = (question, arr, questionKey) => {
-  //assemblkes the individual question and then pushes them to the given array
-  const { id, input, placeholder, description } = question;
+  //optionally adds a description element
   if (description) {
     arr.push(
       <div className="r1-txt" key={`description-${questionKey}`}>
@@ -47,39 +74,66 @@ const _assembleQuestionIoaiOnull = (question, arr, questionKey) => {
     );
   }
 
+  //selects method of element formation by input type
   if (input === "select") {
-    arr.push(__renderSelectIossssOnull(question, id, placeholder, questionKey));
+    arr.push(
+      __renderSelect(
+        question,
+        questionKey,
+        currentLocation,
+        _handleFormChange,
+        currentgroupname,
+        parentname
+      )
+    );
   } else if (input === "checkbox" || input === "radio") {
-    arr.push(__renderCheckIosssOnull(question, input, id, questionKey));
+    arr.push(
+      __renderCheck(
+        question,
+        questionKey,
+        currentLocation,
+        _handleFormChange,
+        currentgroupname,
+        parentname
+      )
+    );
   } else if (input === "range") {
     arr.push(
-      __renderInputsIsssssOnull(
+      __renderInputs(
         "rf1-fi-rn",
-        id,
-        input,
-        placeholder,
-        questionKey
+        question,
+        questionKey,
+        currentLocation,
+        _handleFormChange,
+        currentgroupname,
+        parentname
       )
     );
   } else {
     arr.push(
-      __renderInputsIsssssOnull(
+      __renderInputs(
         "rf1-fi-ctrl",
-        id,
-        input,
-        placeholder,
-        questionKey
+        question,
+        questionKey,
+        currentLocation,
+        _handleFormChange,
+        currentgroupname,
+        parentname
       )
     );
   }
 };
 
-//pushes a select element and options based  on an array of available options
-const __renderSelectIossssOnull = (
-  { selections },
-  id,
-  placeholder,
-  questionKey
+//Input: object{object, string, string}, int, object, function
+//Output: null
+//pushes a select element and options based on an array of available options
+const __renderSelect = (
+  { selections, id, placeholder },
+  questionKey,
+  currentLocation,
+  _handleFormChange,
+  currentgroupname,
+  parentname
 ) => {
   if (!selections) {
     return <></>;
@@ -92,14 +146,32 @@ const __renderSelectIossssOnull = (
     return <option value={optionCount}>{option}</option>;
   });
   return (
-    <select className="rf1-fi-sct" id={id} key={questionKey}>
+    <select
+      className="rf1-fi-sct"
+      id={id}
+      key={questionKey}
+      value={currentLocation.value}
+      onChange={_handleFormChange}
+      data-parentname={parentname}
+      data-groupname={currentgroupname}
+    >
       <option selected>{placeholder}</option>
       {options}
     </select>
   );
 };
 
-const __renderCheckIosssOnull = ({ selections }, input, id, questionKey) => {
+//Input: object{object, string, int}, int, object, function
+//Output: null
+//pushes a check or array element and options based on an array of available options
+const __renderCheck = (
+  { selections, input, id },
+  questionKey,
+  currentLocation,
+  _handleFormChange,
+  currentgroupname,
+  parentname
+) => {
   if (!selections) {
     return <></>;
   }
@@ -124,15 +196,30 @@ const __renderCheckIosssOnull = ({ selections }, input, id, questionKey) => {
     );
   });
 
-  return <div>{options}</div>;
+  return (
+    <div
+      key={id}
+      value={currentLocation.value}
+      onChange={_handleFormChange}
+      data-parentname={parentname}
+      data-groupname={currentgroupname}
+    >
+      {options}
+    </div>
+  );
 };
 
-const __renderInputsIsssssOnull = (
+//Input: string, string, string, int, string, int, object, function
+//Output: null
+//pushes an input element based on a chosen class
+const __renderInputs = (
   inputClass,
-  id,
-  input,
-  placeholder,
-  questionKey
+  { id, input, placeholder },
+  questionKey,
+  currentLocation,
+  _handleFormChange,
+  currentgroupname,
+  parentname
 ) => {
   return (
     <input
@@ -141,11 +228,18 @@ const __renderInputsIsssssOnull = (
       id={id}
       placeholder={placeholder}
       key={questionKey}
+      value={currentLocation.value}
+      onChange={_handleFormChange}
+      data-parentname={parentname}
+      data-groupname={currentgroupname}
     ></input>
   );
 };
 
-const __parseHeaderIsOs = (groupHeader) => {
+//Input: string
+//Output: react Element
+//Changes the header from kebab-case into Formatted Headers in a react element
+const __parseHeader = (groupHeader) => {
   let parsed = groupHeader.split("-");
   parsed = parsed.map((word) => {
     word = word.charAt(0).toUpperCase() + word.slice(1);

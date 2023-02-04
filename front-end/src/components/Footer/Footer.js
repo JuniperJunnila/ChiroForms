@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, Yelp, Google, Instagram } from "react-bootstrap-icons";
 import { Row, Col } from "react-bootstrap";
 
-//f1
+//SCSS Tag Group: f1
 export default function Footer({ appState }) {
   const { footerState } = appState;
   const { links } = footerState;

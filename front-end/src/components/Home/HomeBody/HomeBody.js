@@ -3,8 +3,27 @@ import RenderForm from "../../../utils/Form/RenderForm";
 import formSeed from "./formSeed";
 
 export default function HomeBody({ appState }) {
-  
-  const [formState, setFormState] = useState(formSeed);
+  const initialForms = formSeed;
+  const [formState, setFormState] = useState(initialForms);
+
+  const _handleFormChange = ({ target }) => {
+    const { value, dataset } = target;
+    const { parentname, groupname } = dataset;
+
+    const formAtGroup = formState[groupname]
+    const groupAtQuestion = formAtGroup[parentname]
+
+    setFormState({
+      ...formState,
+      [groupname]: {
+        ...formAtGroup,
+        [parentname]: {
+          ...groupAtQuestion,
+          value: value,
+        },
+      },
+    });
+  };
 
   return (
     <div className="hb1-wrap" id="body-wrapper">
@@ -14,7 +33,7 @@ export default function HomeBody({ appState }) {
         </h1>
       </div>
 
-      <RenderForm formState={formState} />
+      <RenderForm formState={formState} _handleFormChange={_handleFormChange} />
     </div>
   );
 }

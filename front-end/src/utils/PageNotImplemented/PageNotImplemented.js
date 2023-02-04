@@ -1,6 +1,6 @@
 import React from "react";
 
-//pni
+//SCSS Tag Group: pni
 export default function PageNotImplemented({ pageName }) {
   return (
     <div className="pni-wr" id="pni-wr">

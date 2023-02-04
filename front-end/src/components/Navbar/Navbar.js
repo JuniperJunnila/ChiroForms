@@ -1,6 +1,6 @@
 import React from "react";
 
-//n1
+//SCSS Tag Group: n1
 export default function Navbar() {
   return (
     <nav className="n1-nav" id="n1-nav">
