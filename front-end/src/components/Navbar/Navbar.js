@@ -35,48 +35,43 @@ export default function Navbar() {
       <div className="n1-nav2" id="navbarSupportedContent">
         <ul className="n1-l">
           <li className="n1-li">
-            <a className="n1-a" href="#aNav">
-              A
+            <a className="n1-a" href="#basic-information">
+              Basic Information
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#bNav">
-              B
+            <a className="n1-a" href="#location-of-accident">
+              Location Of Accident
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#cNav">
-              C
+            <a className="n1-a" href="#vehicles-involved">
+              Vehicles Involved
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#dNav">
-              D
+            <a className="n1-a" href="#your-location-inside-the-vehicle">
+              Your Location Inside The Vehicle
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#eNav">
-              E
+            <a className="n1-a" href="#at-the-time-of-impact">
+              At The Time Of Impact
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#fNav">
-              F
+            <a className="n1-a" href="#immediately-following-the-accident">
+              Immediately Following The Accident
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#gNav">
-              G
+            <a className="n1-a" href="#your-work">
+              Your Work
             </a>
           </li>
           <li className="n1-li">
-            <a className="n1-a" href="#hNav">
-              H
-            </a>
-          </li>
-          <li className="n1-li">
-            <a className="n1-a" href="#iNav">
-              I
+            <a className="n1-a" href="#before-and-after-the-accident">
+              Before And After The Accident
             </a>
           </li>
         </ul>

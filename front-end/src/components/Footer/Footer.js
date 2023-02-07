@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Yelp, Google, Instagram } from "react-bootstrap-icons";
+import { Yelp } from "react-bootstrap-icons";
 import { Row, Col } from "react-bootstrap";
 
 //SCSS Tag Group: f1
@@ -7,7 +7,7 @@ export default function Footer({ appState }) {
   const { footerState } = appState;
   const { links } = footerState;
   const { contents } = footerState;
-  const { facebook, yelp, google, instagram, locale, email } = links;
+  const { yelp, locale, email } = links;
   const { credits, localeContents, emailContents } = contents;
   let renderedCredits = [];
   const renderCredits = () => {
@@ -29,17 +29,8 @@ export default function Footer({ appState }) {
     <footer className="f1-wrap" id="f1-wrap">
       <div className="f1-bx" id="f1-bx">
         <section className="f1-bx2" id="f1-bx2">
-          <a className="f1-b" id="f1-b" href={facebook}>
-            <Facebook color="#3b5998" />
-          </a>
           <a className="f1-b" id="f1-b" href={yelp}>
             <Yelp color="#c41200" />
-          </a>
-          <a className="f1-b" id="f1-b" href={google}>
-            <Google color="#dd4b39" />
-          </a>
-          <a className="f1-b" id="f1-b" href={instagram}>
-            <Instagram color="#ac2bac" />
           </a>
         </section>
 

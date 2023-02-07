@@ -65,6 +65,11 @@ const _assembleQuestion = (
   const { description, input, parentname } = question;
   const currentLocation = formState[currentgroupname][parentname];
 
+  //TEMPORARY: write a funtion for conditional rendering
+  if (question.conditional) {
+    return <></>;
+  }
+
   //optionally adds a description element
   if (description) {
     arr.push(
@@ -139,11 +144,15 @@ const __renderSelect = (
     return <></>;
   }
 
-  let optionCount = 0;
+  let optionKey = 0;
 
   const options = selections.map((option) => {
-    optionCount++;
-    return <option value={optionCount}>{option}</option>;
+    optionKey++;
+    return (
+      <option value={option} key={optionKey}>
+        {option}
+      </option>
+    );
   });
   return (
     <select
@@ -155,7 +164,7 @@ const __renderSelect = (
       data-parentname={parentname}
       data-groupname={currentgroupname}
     >
-      <option selected>{placeholder}</option>
+      <option defaultValue>{placeholder}</option>
       {options}
     </select>
   );
@@ -165,7 +174,7 @@ const __renderSelect = (
 //Output: null
 //pushes a check or array element and options based on an array of available options
 const __renderCheck = (
-  { selections, input, id },
+  { selections, input, id, name },
   questionKey,
   currentLocation,
   _handleFormChange,
@@ -178,11 +187,17 @@ const __renderCheck = (
 
   const options = selections.map((option) => {
     return (
-      <div className="rf1-bx-ck" id={id} key={`${option}-${questionKey}-box`}>
+      <div
+        className="rf1-bx-ck"
+        id={id}
+        key={`${option}-${questionKey}-box`}
+        name={name}
+      >
         <label
           className="rf1-lab-ck"
           htmlFor={id}
           key={`${option}-${questionKey}-label`}
+          name={name}
         >
           {option}
         </label>
@@ -191,6 +206,9 @@ const __renderCheck = (
           type={input}
           key={`${option}-${questionKey}`}
           value={option}
+          data-groupname={currentgroupname}
+          data-parentname={parentname}
+          name={name}
         />
       </div>
     );
@@ -203,6 +221,7 @@ const __renderCheck = (
       onChange={_handleFormChange}
       data-parentname={parentname}
       data-groupname={currentgroupname}
+      name={name}
     >
       {options}
     </div>
@@ -245,5 +264,5 @@ const __parseHeader = (groupHeader) => {
     word = word.charAt(0).toUpperCase() + word.slice(1);
     return word;
   });
-  return <h3>{parsed.join(" ")}</h3>;
+  return <section className="rf1-parsed-header" id={`${groupHeader}`}>{parsed.join(" ")}</section>;
 };

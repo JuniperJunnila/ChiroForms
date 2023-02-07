@@ -1,5 +1,11 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+formbody {
+  position:relative;
+  height: 1ph;
+  overflow: auto;
+}
+
 .h1-wrap {
   @extend .container !optional;
   @extend .d-flex !optional;
@@ -82,4 +88,8 @@
 
 .rf1-lab-ck {
   @extend .form-check-label !optional;
+}
+
+.rf1-parsed-header {
+  @extend .h3
 }

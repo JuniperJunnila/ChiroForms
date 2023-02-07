@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AllRoutes from "./utils/Routes/Routes.js";
 
-
 export default function App() {
   // const UPLOAD_STATES = {
   //   NONE: 0,
@@ -24,20 +23,20 @@ export default function App() {
       navState: { adminView: false },
       footerState: {
         links: {
-          facebook: "https://linktr.ee/",
-          yelp: "https://linktr.ee/",
-          google: "https://linktr.ee/",
-          instagram: "https://linktr.ee/",
-          locale: "https://linktr.ee/",
-          email: "https://linktr.ee/",
+          yelp: "https://www.yelp.com/biz/lifestyle-health-and-fitness-center-oakley",
+          locale:
+            "https://www.google.com/maps?ll=38.003741,-121.751015&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=6299585167640625869",
+          email: "https://www.oakleychiropractor.com/contact-us/",
         },
         contents: {
           credits: [
-            ["Team Member 1", "Jane Doe"],
-            ["Team Member 2", "John Buck"],
+            ["Team Member 1", "Dr. Rick Junnila"],
+            ["Team Member 2", "Dr Brenda Ramos"],
           ],
-          localeContents: "123 Placeolder Ct.",
-          emailContents: "example@website.com",
+          localeContents: `Lifestyle Chiropractic & Fitness Center
+          5351 Neroly Rd, Ste B
+          Oakley, CA 94561`,
+          emailContents: "https://www.oakleychiropractor.com/contact-us/",
         },
       },
       homeState: {
