@@ -26,7 +26,7 @@ export default function HomeBody({ appState }) {
   };
 
   return (
-    <formbody
+    <div
       className="hb1-wrap"
       id="body-wrapper"
       data-bs-spy="scroll"
@@ -42,6 +42,6 @@ export default function HomeBody({ appState }) {
       </div>
 
       <RenderForm formState={formState} _handleFormChange={_handleFormChange} />
-    </formbody>
+    </div>
   );
 }

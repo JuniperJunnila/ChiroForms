@@ -149,7 +149,7 @@ const __renderSelect = (
   const options = selections.map((option) => {
     optionKey++;
     return (
-      <option value={option} key={optionKey}>
+      <option value={option} key={`${questionKey}-${optionKey}`}>
         {option}
       </option>
     );
@@ -204,7 +204,7 @@ const __renderCheck = (
         <input
           className="rf1-fi-ck"
           type={input}
-          key={`${option}-${questionKey}`}
+          key={`${option}-${questionKey}-input`}
           value={option}
           data-groupname={currentgroupname}
           data-parentname={parentname}
