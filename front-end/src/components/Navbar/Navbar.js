@@ -9,7 +9,7 @@ export default function Navbar() {
           <img
             className="n1-bn"
             id="n1-bn"
-            src="https://doc.vortala.com/childsites/uploads/1252/files/bg.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Juniper_Tree_Dance_at_the_Grand_Canyon.jpg"
             alt="Lifestyle Health and Fitness Banner"
           />
         </a>
