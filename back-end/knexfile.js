@@ -2,8 +2,8 @@ const path = require("path");
 require("dotenv").config();
 const { DATABASE_URL } = process.env;
 
-const migpath = path.join(__dirname, "src", "db", "migrations")
-console.log(migpath)
+const migpath = path.join(__dirname, "src", "db", "migrations");
+console.log(migpath);
 
 module.exports = {
   development: {
@@ -11,6 +11,9 @@ module.exports = {
     connection: DATABASE_URL,
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
+    },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
     },
   },
 
@@ -25,6 +28,9 @@ module.exports = {
     migrations: {
       directtory: path.join(__dirname, "src", "db", "migrations"),
     },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
+    },
   },
 
   production: {
@@ -37,6 +43,9 @@ module.exports = {
     },
     migrations: {
       directtory: path.join(__dirname, "src", "db", "migrations"),
+    },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
     },
   },
 };
