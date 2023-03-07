@@ -264,5 +264,9 @@ const __parseHeader = (groupHeader) => {
     word = word.charAt(0).toUpperCase() + word.slice(1);
     return word;
   });
-  return <section className="rf1-parsed-header" id={`${groupHeader}`}>{parsed.join(" ")}</section>;
+  return (
+    <section className="rf1-parsed-header" id={`${groupHeader}`}>
+      {parsed.join(" ")}
+    </section>
+  );
 };

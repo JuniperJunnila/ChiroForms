@@ -1,7 +1,11 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+legal {
+  @extend .text-center !optional;
+}
+
 formbody {
-  position:relative;
+  position: relative;
   height: 1ph;
   overflow: auto;
 }
@@ -44,6 +48,10 @@ formbody {
 
 .rf1-ff {
   height: auto;
+}
+
+.rf1-f {
+  @extend .flex-row !optional;
 }
 
 .rf1-form {
@@ -91,5 +99,5 @@ formbody {
 }
 
 .rf1-parsed-header {
-  @extend .h3
+  @extend .h3;
 }
